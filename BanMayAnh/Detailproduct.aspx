@@ -75,8 +75,8 @@
                         <input type="number" id="quantity" name="quantity" min="1" value="1" />
                     </div>
                     <div class="product-actions">
-                        <button class="add">Thêm Vào Giỏ Hàng</button>
-                        <button class="purchase" onclick="window.open('ThanhToan.aspx', '_blank')">Mua Ngay</button>
+                        <button type="button" class ="add" onclick="window.open('GioHang.aspx', '_blank')">Thêm Vào Giỏ Hàng</button>
+                        <button type="button" class="purchase" onclick="window.open('ThanhToan.aspx', '_blank')">Mua Ngay</button>
                     </div>
 
                     <h3>Các thông số kỹ thuật</h3>
