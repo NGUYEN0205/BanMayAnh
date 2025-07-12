@@ -1,0 +1,364 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FBF2EB;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header */
+#logo {
+    width: 120px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(58, 57, 57, 0.3);
+    background-color: burlywood;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 1;
+}
+
+#logobg {
+    width: 120px;
+    position: relative;
+    margin-top: 20px;
+    height: 40px;
+    background-color: burlywood;
+}
+
+#header {
+    display: flex;
+}
+
+#menu {
+    background-color: burlywood;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#menu-items {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+    #menu-items li {
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+        #menu-items li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #menu-items li:hover {
+            background-color: white;
+        }
+
+        #menu-items li.dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #menu-items li.active {
+            color: #000000;
+            background-color: #fff;
+        }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: burlywood;
+    min-width: 150px;
+    z-index: 1;
+    list-style: none;
+}
+
+    .dropdown-content li a {
+        display: block;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+    }
+
+        .dropdown-content li a:hover {
+            background-color: #fff;
+        }
+
+#blogin {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: 6%;
+    display: flex;
+}
+
+#login, #register {
+    width: 100px;
+    padding: 5px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 2px rgba(203, 202, 202, 0.3);
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#login {
+    background-color: aquamarine;
+}
+
+#register {
+    background-color: rgb(165, 167, 167);
+}
+
+/* Cart Section */
+.cart-container {
+    max-width: 1100px;
+    margin: auto;
+    margin-top:200px;
+}
+
+.success-msg {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cart-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items:stretch;
+}
+
+.cart-left {
+    flex: 2;
+}
+
+.cart-right {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .cart-table th,
+    .cart-table td {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-img {
+    width: 60px;
+    height: auto;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-desc {
+    font-size: 13px;
+    color: #777;
+}
+
+.price, .subtotal {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.quantity input {
+    width: 40px;
+    text-align: center;
+}
+
+.quantity button {
+    padding: 5px 10px;
+}
+.quantity-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+    .quantity-box input {
+        width: 40px;
+        text-align: center;
+        border: none;
+        outline: none;
+    }
+
+.btn-qty {
+    background-color: #eee;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+    .btn-qty:hover {
+        background-color: #ccc;
+    }
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #85c94f;
+    border: none;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    background-color: #FBF2EB;
+    color: #85c94f;
+    border:1px solid gray;
+    border-radius:4px;
+}
+    .btn-secondary:hover {
+        border-color: #85c94f;
+        background-color: #85c94f;
+        color:white;
+    }
+.btn-primary:hover {
+    background-color: #6cab36;
+}
+.summary p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.summary span {
+    float: right;
+    color: #4CAF50;
+    font-weight: bold;
+}
+.summary-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.summary hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.voucher-input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+    .voucher-input-group input {
+        flex: 1;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        height: 40px;
+    }
+
+    .voucher-input-group button {
+        padding: 8px 20px;
+        font-size: 14px;
+        background-color: #85c94f;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+        .voucher-input-group button:hover {
+            background-color: #6cab36;
+        }
+
+.checkout-btn {
+    background-color: #f4511e;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.checkout-btn:hover {
+    background-color: #d43f1a;
+}
+.voucher label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.voucher input {
+    padding: 8px;
+    width: calc(100% - 90px);
+    margin-right: 10px;
+}
+
+.voucher button {
+    padding: 8px 15px;
+    height: 60px;
+}
+
+#footer {
+    color: rgb(34, 33, 33);
+    background-color: wheat;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 450px;
+}
+
+    #footer p {
+        font-size: 150%;
+    }
+
+#lienhe, #Tglv, #tt {
+    width: 30%;
+}

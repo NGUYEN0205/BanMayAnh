@@ -1,0 +1,220 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body {
+    background-color: #FBF2EB;
+    font-family: sans-serif;
+}
+
+#logo {
+    width: 120px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(58, 57, 57, 0.3);
+    background-color: burlywood;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 1;
+}
+
+#logobg {
+    width: 120px;
+    position: relative;
+    margin-top: 20px;
+    height: 40px;
+    background-color: burlywood;
+}
+
+#header {
+    display: flex;
+}
+
+#menu {
+    background-color: burlywood;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+}
+
+li {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+#menu li:hover {
+    background-color: white;
+}
+
+#banner {
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 2px rgba(203, 202, 202, 0.3);
+}
+
+#timkiem {
+    width: 50%;
+    height: 40px;
+    display: block;
+    box-shadow: 2px 2px 2px rgba(203, 202, 202, 0.3);
+    border: 1px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+    #timkiem:focus {
+        outline: none;
+    }
+
+#blogin {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 6%;
+    display: flex;
+}
+
+#login {
+    background-color: aquamarine;
+    width: 100px;
+    padding: 5px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px;
+    box-shadow: 2px 2px 2px rgba(203, 202, 202, 0.3);
+}
+
+#register {
+    background-color: rgb(165, 167, 167);
+    width: 100px;
+    padding: 5px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px;
+    box-shadow: 2px 2px 2px rgba(203, 202, 202, 0.3);
+}
+
+h2 {
+    padding: 2%;
+    font-size: 35px;
+    color: rgb(76,89,93);
+}
+
+#dssp {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.sp {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+
+    .sp:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+#dssp .sp img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tensp {
+    font-size: 16px;
+    color: #333;
+    padding: 10px 0;
+    height: 50px;
+    overflow: hidden;
+}
+
+.gia {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+.sl {
+    font-size: 20px;
+    color: gray;
+    padding: 10%;
+}
+
+#footer {
+    color: rgb(34, 33, 33);
+    background-color: wheat;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+}
+
+    #footer p {
+        font-size: 150%;
+    }
+
+#lienhe {
+    margin: 5px;
+    width: 30%;
+    font-family: sans-serif;
+}
+
+#Tglv {
+    align-items: center;
+    margin: 5px;
+    width: 30%;
+}
+
+#tt {
+    width: 30%;
+    align-items: right;
+    margin: 5px;
+}
+
+#loc {
+    min-height: 500px;
+    text-align: center;
+    overflow:hidden;
+}
+
+.khoanggia {
+    border-radius: 1px;
+    width: 100px;
+    height: auto;
+    font-size: 18px;
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, .05);
+    border: 1px solid rgba(0, 0, 0, .26);
+    outline: none;
+    padding: 5px;
+}
+
+#loc p {
+    padding: 10px;
+    font-size: medium;
+}

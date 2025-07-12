@@ -1,0 +1,56 @@
+﻿body {
+    font-family: 'Times New Roman', sans-serif;
+    padding: 40px 10px;
+    background-image: url("anh/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+}
+
+.nhap {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid grey;
+    width: 92%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+
+
+div {
+    margin-top: 20px;
+}
+
+.Loi {
+    text-align: right;
+    color: red;
+    font-size: 9dp;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background: orange;
+    font-size: 20px;
+    color: white;
+    border: none;
+}
+button:hover {
+    background: red;
+    color: white;
+}

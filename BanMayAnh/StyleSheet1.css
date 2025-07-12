@@ -1,0 +1,128 @@
+﻿form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+.nhap {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid grey;
+    width: 92%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    /*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);*/
+}
+
+
+label {
+    margin-left: 20px;
+    margin-bottom: 10px 0 5px;
+}
+
+div {
+    margin-top: 20px;
+}
+
+select {
+    width: 94%;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 90%;
+    padding: 15px 15px;
+    border: 1px solid #7a5cff;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+table {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 94%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: none;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    border: none;
+}
+
+.DoiMau {
+    border-collapse: collapse;
+}
+
+    .DoiMau tbody td {
+        padding: 10px 15px;
+        color: #333;
+        vertical-align: middle;
+    }
+
+    .DoiMau tbody tr:nth-child(even) {
+        background-color: #e8e3fe; /*chẵn*/
+    }
+
+    .DoiMau tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+.Loi {
+    text-align: right;
+    color: red;
+    font-size: 9dp;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: 'block';
+}
+
+#btnReset {
+        font-size: 20px; 
+        border-color: #7a5cff;
+        color: #7a5cff;
+        background-color:white; 
+        border-radius:0; 
+        margin-left: 20px; 
+        border-width: 2px;
+}
+    #btnReset:hover {
+        background-color: #7a5cff;
+        color: white;
+    }
+
+#btnSubmit {
+    font-size: 20px;
+    border-color: #7a5cff;
+    color: #7a5cff;
+    background-color: white;
+    border-radius: 0;
+    margin-right: 20px;
+    border-width: 2px;
+}
+
+    #btnSubmit:hover {
+        background-color: #7a5cff;
+        color: white;
+    }
+
+

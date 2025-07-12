@@ -1,0 +1,123 @@
+﻿
+
+#dssp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.sp {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+
+    .sp:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+/*@media (max-width: 992px) {
+    .sp {
+        width: 20%;
+    }
+}
+
+@media (max-width: 600px) {
+    .sp {
+        width: 30%;
+    }
+}*/
+
+#dssp .sp img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tensp {
+    font-size: 16px;
+    color: #333;
+    padding: 10px 0;
+    height: 50px;
+    overflow: hidden;
+}
+
+.gia {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+
+.dathang {
+    display: block;
+    width: 120px;
+    margin: 10px auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+    .dathang:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+.active {
+     background-color: white;
+ }
+
+.sp a {
+    text-decoration: none;
+}
+
+#footer {
+    color: rgb(34, 33, 33);
+    background-color: wheat;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+    #footer p {
+        font-size: 150%;
+    }
+
+#lienhe {
+    margin: 15px;
+    width: 30%;
+    font-family: sans-serif;
+}
+
+#Tglv {
+    align-items: center;
+    margin: 15px;
+    width: 30%;
+}
+
+#tt {
+    width: 30%;
+    align-items: right;
+    margin: 15px;
+}
