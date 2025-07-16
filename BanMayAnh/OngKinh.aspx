@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MayAnh.aspx.cs" Inherits="BanMayAnh.DanhMucSanPham" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OngKinh.aspx.cs" Inherits="BanMayAnh.OngKinh" %>
 
 <!DOCTYPE html>
 
@@ -40,6 +40,7 @@
                 <input id="register" type="button" onclick=" window.location.href = 'dangky.aspx'" value="Đăng ký">
             </div>
         </div>
+
 
         <div id="dssp">
             <div class="sp">

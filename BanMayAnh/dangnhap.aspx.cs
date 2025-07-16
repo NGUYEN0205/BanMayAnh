@@ -75,9 +75,17 @@ namespace BanMayAnh
                         if (isAuthenticated)
                         {
                             // Đăng nhập thành công
+                            string returnUrl = Request.QueryString["ReturnUrl"];
                             Session["LoggedInUser"] = user;
                             Session.Remove("RegisteredUsername");
-                            Response.Redirect("TrangChu.aspx");
+                            if (!string.IsNullOrEmpty(returnUrl))
+                            {
+                                Response.Redirect(returnUrl);
+                            }
+                            else
+                            {
+                                Response.Redirect("TrangChu.aspx");
+                            }
                         }
                         else
                         {

@@ -54,10 +54,11 @@
             <label style="margin-left: 20px; margin-top:40px; font-size:20px"><b>*Thông tin đơn hàng</b></label><br/>
             <table>
                 <tr>
-                    <td><img src="anh/Canon-7d-mark2-5106-2-scaled.jpg" alt="Canon EOS 7D Mark II" height=300px weight=300px style="margin-left:20px;"/></td>
-                    <td><b style="font-size:25px">Canon EOS 7D Mark II cũ</b>
-                        <p style="font-size:20px; color:red">8.500.000đ</p>
-                        <p style="font-size:20px;">Số lượng: 1</p>
+                    <td><img id="imgSP" runat="server" alt="" style="margin-left:20px; height:300px;" /></td>
+                    <td>
+                        <b id="tenSP" runat="server" style="font-size:25px"></b>
+                        <p id="giaSP" runat="server" style="font-size:20px; color:red"></p>
+                        <p id="soLuong" runat="server" style="font-size:20px;"></p>
                     </td>
                 </tr>
             </table>
@@ -68,19 +69,19 @@
             <table style="margin-left:20px; font-size:20px">
                 <tr>
                     <td width="600">Tổng sản phẩm</td>
-                    <td>8.500.000đ</td>
+                    <td><span id="tongSP" runat="server"></span></td>
                 </tr>
                 <tr>
                     <td>Vận chuyển</td>
-                    <td>100.000đ</td>
+                    <td><span id="phiShip" runat="server">100.000đ</span></td>
                 </tr>
                 <tr>
                     <td>Giảm giá</td>
-                    <td>- 0đ</td>
+                    <td><span id="giamGia" runat="server">0đ</span></td>
                 </tr>
                 <tr>
                     <td>Cần thanh toán</td>
-                    <td style="color:red">8.600.000đ</td>
+                    <td style="color:red"><span id="tongTien" runat="server"></span></td>
                 </tr>
             </table>
         </div>
