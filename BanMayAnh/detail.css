@@ -38,7 +38,6 @@ body {
     text-align: center;
 }
 
-
 #menu-items {
     list-style-type: none;
     display: flex;
@@ -102,8 +101,7 @@ body {
         background-color: #fff;
     }
 
-#login {
-    background-color: aquamarine;
+#login, #register {
     width: 100px;
     padding: 5px;
     height: 40px;
@@ -113,18 +111,18 @@ body {
     margin-top: 20px;
 }
 
+#login {
+    background-color: aquamarine;
+}
+
 #register {
     background-color: rgb(165, 167, 167);
-    width: 100px;
-    padding: 5px;
-    height: 40px;
-    border-radius: 30px;
-    border: 1px;
-    box-shadow: 2px 2px 2px rgba(203, 202, 202, 0.3);
-    margin-top: 20px;
 }
+
 .price {
     color: #85c94f;
+    font-weight: bold;
+    margin-bottom: 12px;
 }
 
 .product-list {
@@ -142,7 +140,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     text-align: center;
-    cursor: pointer
+    cursor: pointer;
 }
 
     .product-item img {
@@ -157,12 +155,6 @@ body {
         margin-bottom: 8px;
         height: 48px;
     }
-
-.price {
-    color: green;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
 
 button {
     padding: 10px 18px;
@@ -184,13 +176,14 @@ button {
     text-transform: uppercase;
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
 }
+
 .product-container {
     display: flex;
     gap: 30px;
     padding: 20px;
     background: #f9f9f9;
     margin: 0 auto;
-    max-width:1200px
+    max-width: 1200px;
 }
 
 .product-image img {
@@ -243,16 +236,15 @@ button {
 .phanloai-group {
     display: flex;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
 .phanloai {
-    border: 1px solid #ccc;
-    background: #fff;
-    color: #555;
     padding: 8px 14px;
-    border-radius: 0px;
+    border: 1px solid #ccc;
+    background: white;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: border 0.3s, background-color 0.3s;
 }
 
     .phanloai:hover {
@@ -260,6 +252,50 @@ button {
         box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
+    .phanloai.active {
+        border: 1px solid gray;
+    }
+
+.color-price-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-price-list {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+    .color-price-list.active {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+
+    .color-price-list li {
+        padding: 10px 12px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #c00;
+        transition: background 0.3s ease;
+    }
+
+        .color-price-list li:hover {
+            background-color: #f1f1f1;
+        }
+
+        .color-price-list li.selected {
+            color: #a00;
+        }
 .product-actions {
     margin: 20px 0;
 }
@@ -308,6 +344,7 @@ ul {
     border-color: gray;
     border-radius: 4px;
 }
+
 #blogin {
     margin-top: 20px;
     margin-left: auto;
@@ -334,17 +371,18 @@ ul {
         border: 1px solid #ccc;
         border-radius: 4px;
     }
-    a.link:hover
-    {
-        font-weight:bold;
-        color:#555;
-        transition: color 0.3s ease;
-    }
-    h2
-    {
-        margin-left:150px;
-        margin-top:20px;
-    }
+
+a.link:hover {
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+h2 {
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
 .main-image-wrapper {
     position: relative;
     display: inline-block;
@@ -406,6 +444,7 @@ ul {
     opacity: 1;
     border: 2px solid;
 }
+
 #footer {
     color: rgb(34, 33, 33);
     background-color: wheat;
@@ -423,11 +462,4 @@ ul {
 #lienhe, #Tglv, #tt {
     width: 30%;
 }
-
-
-
-
-
-
-
 
