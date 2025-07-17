@@ -59,18 +59,15 @@ function chonMau(item, mau, gia) {
     document.querySelectorAll('.color-price-list li').forEach(li => li.classList.remove('selected'));
     item.classList.add('selected');
 
-    document.getElementById('giaChonText').textContent =`${gia}`;
+    document.getElementById('giaChonText').textContent = `${gia}`;
 }
-
 function muaNgay() {
     if (!loaiDangChon || !mauDangChon || !giaDangChon) {
         alert("Vui lòng chọn loại và màu sản phẩm trước khi mua.");
         return;
     }
-
     const quantity = document.getElementById("quantity").value || 1;
-    const url = `ThanhToan.aspx?loai=${encodeURIComponent(loaiDangChon)}&mau=${encodeURIComponent(mauDangChon)}&gia=${encodeURIComponent(giaDangChon)}&soluong=${quantity}`;
-    window.location.href = url;
+    window.location.href = `ThanhToan.aspx?loai=${encodeURIComponent(loaiDangChon)}&mau=${encodeURIComponent(mauDangChon)}&gia=${encodeURIComponent(giaDangChon)}&soluong=${quantity}`;
 }
 
 function GioHang() {
@@ -80,9 +77,12 @@ function GioHang() {
     }
 
     const quantity = document.getElementById("quantity").value || 1;
-    const url = `GioHang.aspx?loai=${encodeURIComponent(loaiDangChon)}&mau=${encodeURIComponent(mauDangChon)}&gia=${encodeURIComponent(giaDangChon)}&soluong=${quantity}`;
-    window.location.href = url;
+    window.location.href = `GioHang.aspx?loai=${encodeURIComponent(loaiDangChon)}&mau=${encodeURIComponent(mauDangChon)}&gia=${encodeURIComponent(giaDangChon)}&soluong=${quantity}`;
 }
+window.GioHang = GioHang;
+window.chonLoai = chonLoai;
+window.chonMau = chonMau;
+window.muaNgay = muaNgay;
 
 
 
