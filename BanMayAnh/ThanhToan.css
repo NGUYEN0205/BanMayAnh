@@ -39,7 +39,7 @@ div {
     margin-right: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
-    display: none;
+    display: 'block';
 }
 
 button {
