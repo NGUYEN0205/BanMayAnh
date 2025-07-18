@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,10 +8,14 @@ using System.Web.UI.WebControls;
 
 namespace BanMayAnh
 {
-    public partial class DanhMucSanPham: System.Web.UI.Page
+    public partial class DanhMucSanPham : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Application["DSSP"] == null)
+            {
+                Application["DSSP"] = new List<MayAnh>();
+            }
             if (blogin != null && alogin != null)
             {
                 if (Session["LoggedInUser"] != null)
@@ -28,9 +33,12 @@ namespace BanMayAnh
             {
                 string loai = Request.QueryString["loai"];
                 List<MayAnh> ds = (List<MayAnh>)Application["DSSP"];
+                if (ds == null)
+                {
+                    ds = new List<MayAnh>(); 
+                }
                 if (!string.IsNullOrEmpty(loai))
                 {
-                    // Lọc sản phẩm theo loại (không phân biệt hoa thường)
                     var dsLoc = ds.Where(sp => !string.IsNullOrEmpty(sp.Loai) && sp.Loai.Equals(loai, StringComparison.OrdinalIgnoreCase)).ToList();
                     rptProducts.DataSource = dsLoc;
                     if (loai.Equals("ongkinh", StringComparison.OrdinalIgnoreCase))
@@ -55,7 +63,6 @@ namespace BanMayAnh
             }
         }
 
- 
         public void Login_Click(object sender, EventArgs e)
         {
             Response.Redirect("dangnhap.aspx?ReturnUrl=MayAnh.aspx");
@@ -92,7 +99,7 @@ namespace BanMayAnh
             }
         }
 
-        public void Logout_Click (object sender, EventArgs e)
+        public void Logout_Click(object sender, EventArgs e)
         {
             Session["LoggedInUser"] = null;
             blogin.Visible = true;

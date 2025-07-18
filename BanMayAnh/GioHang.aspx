@@ -38,7 +38,7 @@
             </div>
         </div>
          <div class="cart-container">
-        <p class="success-msg">✔ “Máy ảnh Fujifilm X100 Mark VI (X100VI – Mới)” đã được thêm vào giỏ hàng.</p>
+        <p class="success-msg">✔ Máy ảnh<%# Eval("TenSP") %> đã được thêm vào giỏ hàng</p>
 
         <div class="cart-content">
             <div class="cart-left">

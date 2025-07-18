@@ -37,76 +37,64 @@
         <input id="register" type="button" onclick="" value="Đăng ký">
     </div>
 </div>
-            <div class="product-container">
-                    <div class="product-image">
-      <div class="main-image-wrapper">
-        <div class="ribbon">sale</div>
-        <img id="main-image" src="sp1.jpg" alt="Ảnh sản phẩm" />
-        <button type="button" class="swap-main-btn" onclick="swapToNextThumb()">↔</button>
-      </div>
+<div class="product-container">
+  <!-- CỘT TRÁI: Hình ảnh sản phẩm -->
+  <div class="product-image">
+    <div class="main-image-wrapper">
+      <div class="ribbon">sale</div>
+      <asp:Repeater ID="rptProducts" runat="server">
+        <ItemTemplate>
+          <img id="main-image" src='<%# Eval("Anh") %>' alt='<%# Eval("TenSP") %>' />
+        </ItemTemplate>
+      </asp:Repeater>
+      <button type="button" class="swap-main-btn" onclick="swapToNextThumb()">↔</button>
+    </div>
 
-      <div class="gallery-thumbs">
-        <div class="thumb-wrapper"><img src="sp1.1.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
-        <div class="thumb-wrapper"><img src="sp1.2.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
-        <div class="thumb-wrapper"><img src="sp1.3.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
-        <div class="thumb-wrapper"><img src="sp1.4.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
-        <div class="thumb-wrapper"><img src="sp1.5.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
-      </div>
-
+    <div class="gallery-thumbs">
+      <div class="thumb-wrapper"><img src="sp1.1.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
+      <div class="thumb-wrapper"><img src="sp1.2.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
+      <div class="thumb-wrapper"><img src="sp1.3.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
+      <div class="thumb-wrapper"><img src="sp1.4.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
+      <div class="thumb-wrapper"><img src="sp1.5.jpeg" onclick="setMainImage(this)" class="thumb" /></div>
+    </div>
   </div>
-                <div class="product-detail">
-                    <div class="breadcrumb">
-                    <a href="Trangchu.aspx" class="link">Trang chủ</a><span> / </span>
-                    <a href="#" class="link">Máy ảnh Mirrorless</a><span> / </span>
-                    <a href="#" class="link">FUJIFILM</a>
-                </div>
-                    <h1 class="product-title">Máy Ảnh Fujifilm X100 VI Mark VI (X100VI - MỚI)</h1>
+  <div class="product-detail">
+    <div class="breadcrumb">
+      <a href="Trangchu.aspx" class="link">Trang chủ</a><span> / </span>
+      <a href="MayAnh.aspx" class="link">Máy ảnh</a><span> / </span>
+      <a href="#" class="link">FUJIFILM</a>
+    </div>
 
-                    <p class="product-price"><span id="giaChonText">46.900.000 ~ 49.490.000₫</span></p>
+    <asp:Repeater ID="rptDetail" runat="server">
+      <ItemTemplate>
+        <h1 class="product-title"><%# Eval("TenSP") %></h1>
+        <p class="product-price"><span id="giaChonText"><%# Eval("Gia") %></span></p>
+      </ItemTemplate>
+    </asp:Repeater>
 
-<h4>Phân loại</h4>
-<div class="phanloai-group">
-  <button type="button" class="phanloai" onclick="chonLoai(this, 'hangmoi')">Hàng mới chính hãng</button>
-  <button type="button" class="phanloai" onclick="chonLoai(this, 'nhapkhau')">Hàng mới nhập khẩu</button>
-  <button type="button" class="phanloai" onclick="chonLoai(this, 'hangdep')">Hàng đẹp</button>
+    <div class="quantity-group">
+      <label for="quantity">Số lượng:</label>
+      <input type="number" id="quantity" name="quantity" min="1" value="1" />
+    </div>
+
+    <div class="product-actions">
+      <button type="button" class="add" onclick="GioHang()">Thêm Vào Giỏ Hàng</button>
+      <button type="button" class="purchase" onclick="muaNgay()">Mua Ngay</button>
+    </div>
+
+    <h3>Các thông số kỹ thuật</h3>
+    <ul>
+      <li>Cảm biến APS‑C X‑Trans CMOS 5 HR 40,2 MP + X‑Processor 5</li>
+      <li>Ổn định hình ảnh IBIS 5‑trục (6 stop)</li>
+      <li>Ống kính cố định Fujinon 23 mm f/2</li>
+      <li>Quay video 6.2K/30p, 4K/60p, FHD 240p</li>
+      <li>Kính ngắm lai OVF/EVF</li>
+      <li>Màn hình cảm ứng nghiêng 3″</li>
+      <li>Frame.io camera-to-cloud</li>
+    </ul>
+  </div>
 </div>
 
-<div class="color-price-wrapper">
-  <ul id="hangmoi-list" class="color-price-list">
-    <li onclick="chonMau(this, 'Màu đen', '50.000.000₫')">Màu đen – 50.000.000₫</li>
-    <li onclick="chonMau(this, 'Màu bạc', '54.000.000₫')">Màu bạc – 54.000.000₫</li>
-  </ul>
-
-  <ul id="nhapkhau-list" class="color-price-list">
-    <li onclick="chonMau(this, 'Màu bạc', '57.000.000₫')">Màu bạc – 57.000.000₫</li>
-    <li onclick="chonMau(this, 'Màu đen', '52.000.000₫')">Màu đen – 52.000.000₫</li>
-  </ul>
-  <ul id="hangdep-list" class="color-price-list">
-    <li onclick="chonMau(this, 'Màu đen', '45.000.000₫')">Màu đen – 45.000.000₫</li>
-    <li onclick="chonMau(this, 'Màu bạc', '47.000.000₫')">Màu bạc – 47.000.000₫</li>
-  </ul>
-</div>
-                    <div class="quantity-group">
-                        <label for="quantity">Số lượng:</label>
-                        <input type="number" id="quantity" name="quantity" min="1" value="1" />
-                    </div>
-                    <div class="product-actions">
-                        <button type="button" class ="add" onclick="GioHang()">Thêm Vào Giỏ Hàng</button>
-                        <button type="button" class="purchase" onclick="muaNgay()">Mua Ngay</button>
-                    </div>
-
-                    <h3>Các thông số kỹ thuật</h3>
-                    <ul>
-                        <li>Cảm biến APS‑C X‑Trans CMOS 5 HR 40,2 MP + X‑Processor 5</li>
-                        <li>Ổn định hình ảnh IBIS 5‑trục (6 stop)</li>
-                        <li>Ống kính cố định Fujinon 23 mm f/2</li>
-                        <li>Quay video 6.2K/30p, 4K/60p, FHD 240p</li>
-                        <li>Kính ngắm lai OVF/EVF</li>
-                        <li>Màn hình cảm ứng nghiêng 3″</li>
-                        <li>Frame.io camera-to-cloud</li>
-                    </ul>
-                </div>
-            </div>
             <div class="relative-product">
                 <h2><b>SẢN PHẨM LIÊN QUAN</b></h2>
 

@@ -52,7 +52,7 @@
             <asp:Repeater ID="rptProducts" runat="server" OnItemCommand="rptProducts_ItemCommand">
                 <ItemTemplate>
                     <div class="sp">
-                        <a href='<%# Eval("Link") %>'>
+                        <a href='<%# Eval("Link") %>?id=<%# Eval("Id") %>'>
                             <img src='<%# Eval("Anh") %>' alt='<%# Eval("TenSP") %>' />
                             <p class="tensp"><%# Eval("TenSP") %></p>
                             <p class="gia"><%# Eval("Gia") %></p>
