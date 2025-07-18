@@ -16,7 +16,7 @@
             <div id="menu">
                 <ul id="menu-items">
                     <li><a href="TrangChu.aspx">Trang chủ</a></li>
-                    <li class="dropdown active">
+                    <li class="dropdown" id="mayanh" runat="server">
                         <a href="MayAnh.aspx">Máy ảnh</a>
                         <ul class="dropdown-content">
                             <li><a href="MayAnh.aspx?loai=canon">Canon</a></li>
@@ -24,7 +24,7 @@
                             <li><a href="MayAnh.aspx?loai=sony">Sony</a></li>
                         </ul>
                     </li>
-                    <li><a href="OngKinh.aspx">Ống kính</a></li>
+                    <li id = "ongkinh" runat="server"><a href="MayAnh.aspx?loai=ongkinh">Ống kính</a></li>
                     <li><a href="Timkiem.aspx">Tìm kiếm</a></li>
                     <li class="dropdown">
                         <a href="GioHang.aspx">Giỏ hàng</a>

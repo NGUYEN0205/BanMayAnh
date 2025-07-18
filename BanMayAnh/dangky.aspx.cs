@@ -162,7 +162,7 @@ namespace BanMayAnh
                         Application["dstk"] = ds;
 
                         Session["RegisteredUsername"] = user;
-                        Response.Redirect("dangnhap.aspx");
+                        Response.Write("<script>alert('Đăng ký thành công! Vui lòng đăng nhập.'); window.location='dangnhap.aspx';</script>");
                     }
                 }
             }

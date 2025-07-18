@@ -49,7 +49,8 @@ namespace BanMayAnh
                 new MayAnh { Id = 12, Tensp = "Máy ảnh Mirrorless Canon EOS M5 (Kèm kit) cũ", Gia = "12,000,000₫", Anh = "anh/May_anh_MIRRORLESs_Canon_EOS-m5.png", Link="ChiTietSanPham.aspx", Loai = "canon" },
                 new MayAnh { Id = 13, Tensp = "CANON M50 MARK II kèm lens 15-45 (m50 m2)", Gia = "15,000,000₫", Anh = "anh/May_anh_Canon_M50_Mark_II.png", Link="ChiTietSanPham.aspx" , Loai = "canon"},
                 new MayAnh { Id = 14, Tensp = "Canon EOS 77D kèm 18 55 stm cũ", Gia = "9,000,000₫ – 11,500,000₫", Anh = "anh/May_anh_Canon_EOS_77D.jpg", Link="ChiTietSanPham.aspx", Loai = "canon" },
-                new MayAnh { Id = 15, Tensp = "MÁY ẢNH DSLR CANON EOS 1DX MARK II Cũ", Gia = "18,000,000₫ – 26,000,000₫", Anh = "anh/May_anh_DSLR_Canon_EOS1DX.png", Link="ChiTietSanPham.aspx", Loai = "canon" }
+                new MayAnh { Id = 15, Tensp = "MÁY ẢNH DSLR CANON EOS 1DX MARK II Cũ", Gia = "18,000,000₫ – 26,000,000₫", Anh = "anh/May_anh_DSLR_Canon_EOS1DX.png", Link="ChiTietSanPham.aspx", Loai = "canon" },
+                new MayAnh { Id = 16, Tensp = "Ống kính Tamron 35-150mm F/2-2.8 Di III VXD Nikon Z (35-150 Z – Mới)", Gia = "29,000,000₫ – 33,000,000₫", Anh = "anh/Ong_kinh_Tamron_35_150mm.jpeg", Link = "Detailproduct.aspx", Loai = "ongkinh"}
             };
 
             Application["DSSP"]=sp;

@@ -33,11 +33,23 @@ namespace BanMayAnh
                     // Lọc sản phẩm theo loại (không phân biệt hoa thường)
                     var dsLoc = ds.Where(sp => !string.IsNullOrEmpty(sp.Loai) && sp.Loai.Equals(loai, StringComparison.OrdinalIgnoreCase)).ToList();
                     rptProducts.DataSource = dsLoc;
+                    if (loai.Equals("ongkinh", StringComparison.OrdinalIgnoreCase))
+                    {
+                        ongkinh.Attributes["class"] = "active";
+                    }
+                    if (!loai.Equals("ongkinh", StringComparison.OrdinalIgnoreCase))
+                    {
+                        mayanh.Attributes["class"] = "dropdown active";
+                    }
                 }
                 else
                 {
-                    // Hiển thị tất cả nếu không chọn loại
-                    rptProducts.DataSource = ds;
+                    if (loai == null)
+                    {
+                        mayanh.Attributes["class"] = "dropdown active";
+                    }
+                    var dsMayAnh = ds.Where(sp => sp.Loai == null || !sp.Loai.Equals("ongkinh", StringComparison.OrdinalIgnoreCase)).ToList();
+                    rptProducts.DataSource = dsMayAnh;
                 }
                 rptProducts.DataBind();
             }
