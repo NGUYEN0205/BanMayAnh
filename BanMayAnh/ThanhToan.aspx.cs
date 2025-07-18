@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -54,6 +55,33 @@ namespace BanMayAnh
             decimal gia;
             decimal.TryParse(giaStr, out gia);
             return gia;
+        }
+
+        public void BtnThanhToan_Click(object sender, EventArgs e)
+        {
+            var donhang = new
+            {
+                MaDon = "DH" + DateTime.Now.Ticks,
+                NgayDat = DateTime.Now.ToString("dd/mm/yyyy HH:mm"),
+                TrangThai = "Đang xử lý",
+                HoTen = HoTen.Value,
+                SDT = SDT.Value,
+                DiaChi = DiaChi.Value,
+                PhuongThucTT = Request.Form["PhuongThucThanhToan"],
+                TenSP = tenSP.InnerText,
+                GiaSP = giaSP.InnerText,
+                SoLuong = soLuong.InnerText,
+                TongTien = tongTien.InnerText,
+                Anh = imgSP.Src
+            };
+            string key = (string)Session["LoggedInUser"];
+            /*Response.Cookies["dsdh_" + key].Value = donhang.ToString();
+            Response.Cookies["dsdh_"+key].Expires = DateTime.Now.AddDays(15);*/
+
+            List<object> dsdh = Session["dsdh_" + key] as List<object> ?? new List<object>();
+            dsdh.Add(donhang);
+            Session["dsdh_" + key] = dsdh;
+            Response.Redirect("TheoDoiDonHang.aspx");
         }
     }
 }

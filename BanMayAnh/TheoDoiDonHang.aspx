@@ -23,7 +23,7 @@
                             <li><a href="MayAnh.aspx?loai=sony">Sony</a></li>
                         </ul>
                     </li>
-                    <li><a href="OngKinh.aspx">Ống kính</a></li>
+                    <li id = "ongkinh" runat="server"><a href="MayAnh.aspx?loai=ongkinh">Ống kính</a></li>
                     <li><a href="Timkiem.aspx">Tìm kiếm</a></li>
                     <li class="dropdown">
                         <a href="GioHang.aspx">Giỏ hàng</a>
@@ -35,98 +35,39 @@
                 </ul>
             </div>
             <div id="blogin" runat="server">
-                <input id="login" type="button" onclick="" value="Đăng nhập">
-                <input id="register" type="button" onclick="" value="Đăng ký">
+                <input id="login" type="button" onclick="window.location='dangnhap.aspx'" value="Đăng nhập">
+                <input id="register" type="button" onclick="window.location='dangky.aspx'" value="Đăng ký">
+            </div>
+            <div id="alogin" runat="server">
+                <input id="logout" type="submit" runat="server" onclick="return confirm('Bạn có chắc muốn thoát không?');" onserverclick="Logout_Click" value="Đăng xuất">
             </div>
         </div>
 
-         <div class="container">
+         <div class="container" style="min-height:500px">
             <h1>Theo dõi đơn hàng</h1>
 
-             <details>
-                 <summary><h2 style="display: inline; color: #007bff;">Sản phẩm</h2>
-                     <div class="section">
-                        
-                        <div class="product">
-                            <img src="anh/Canon-7d-mark2-5106-2-scaled.jpg" alt="Sản phẩm 1">
+             <asp:Repeater ID="rptDonHang" runat="server">
+                <ItemTemplate>
+                    <details>
+                        <summary>
+                            <h2 style="display: inline; color: #007bff;"><%# Eval("TenSP") %></h2>
+                             <div class="product">
+                                <img src='<%#  Eval("Anh") %>'alt='<%#  Eval("TenSP") %>' />
                             <div class="info">
-                                <p><strong>Tên:</strong> Canon EOS 7D Mark II cũ</p>
-                                <p><strong>Số lượng:</strong> 1</p>
-                                <p><strong>Giá:</strong> 8.500.000đ</p>
-                            </div>
+                        </summary>
+                        <div class="section">
+                            <p><strong>Mã đơn:</strong> <%# Eval("MaDon") %></p>
+                            <p><strong>Ngày đặt:</strong> <%# Eval("NgayDat") %></p>
+                            <p><strong>Trạng thái:</strong> <%# Eval("TrangThai") %></p>
+                            <p><strong>Người nhận:</strong> <%# Eval("HoTen") %></p>
+                            <p><strong>SĐT:</strong> <%# Eval("SDT") %></p>
+                            <p><strong>Địa chỉ:</strong> <%# Eval("DiaChi") %></p>
+                            <p><strong>Phương thức thanh toán:</strong> <%# Eval("PhuongThucTT") %></p>
+                            <p><strong>Tổng tiền:</strong> <%# Eval("TongTien") %></p>
                         </div>
-                    </div>
-                 </summary>
-                 <!-- Thông tin chung -->
-                 <div class="section">
-                    <h2>Thông tin đơn hàng</h2>
-                    <p><strong>Mã đơn:</strong> #DH123456</p>
-                    <p><strong>Ngày đặt:</strong> 10/07/2025</p>
-                    <p><strong>Trạng thái:</strong> <span class="status">Đang giao</span></p>
-                    <p><strong>Phương thức thanh toán:</strong> Thanh toán khi nhận</p>
-                    <p><strong>Tổng tiền:</strong> 8.600.000đ</p>
-                 </div>
-
-                 <!-- Thông tin người nhận -->
-                 <div class="section">
-                    <h2>Thông tin người nhận</h2>
-                    <p><strong>Người nhận:</strong> Nguyễn Văn A</p>
-                    <p><strong>SĐT:</strong> 0323 456 789</p>
-                    <p><strong>Địa chỉ:</strong> 96 Định Công, Hà Nội</p>
-                 </div>
-
-                 <div class="section">
-                    <h2>Trạng thái giao hàng</h2>
-                    <ul class="timeline">
-                        <li>🛒 Đã đặt hàng - 10/07/2025 10:00</li>
-                        <li>✅ Đã xác nhận - 10/07/2025 11:00</li>
-                        <li>🚚 Đang giao - 11/07/2025 08:30</li>
-                    </ul>
-                 </div>
-             </details>
-
-             <details>
-                <summary><h2 style="display: inline; color: #007bff;">Sản phẩm</h2>
-                    <div class="section">
-           
-                       <div class="product">
-                           <img src="anh/Canon-7d-mark2-5106-2-scaled.jpg" alt="Sản phẩm 1">
-                           <div class="info">
-                               <p><strong>Tên:</strong> Canon EOS 7D Mark II cũ</p>
-                               <p><strong>Số lượng:</strong> 1</p>
-                               <p><strong>Giá:</strong> 8.500.000đ</p>
-                           </div>
-                       </div>
-                   </div>
-                </summary>
-                <!-- Thông tin chung -->
-                <div class="section">
-                   <h2>Thông tin đơn hàng</h2>
-                   <p><strong>Mã đơn:</strong> #DH123456</p>
-                   <p><strong>Ngày đặt:</strong> 10/07/2025</p>
-                   <p><strong>Trạng thái:</strong> <span class="status">Đã giao</span></p>
-                   <p><strong>Phương thức thanh toán:</strong> Thanh toán khi nhận</p>
-                   <p><strong>Tổng tiền:</strong> 8.600.000đ</p>
-                </div>
-
-                <!-- Thông tin người nhận -->
-                <div class="section">
-                   <h2>Thông tin người nhận</h2>
-                   <p><strong>Người nhận:</strong> Nguyễn Văn A</p>
-                   <p><strong>SĐT:</strong> 0323 456 789</p>
-                   <p><strong>Địa chỉ:</strong> 96 Định Công, Hà Nội</p>
-                </div>
-
-                <div class="section">
-                   <h2>Trạng thái giao hàng</h2>
-                   <ul class="timeline">
-                       <li>🛒 Đã đặt hàng - 10/07/2025 10:00</li>
-                       <li>✅ Đã xác nhận - 10/07/2025 11:00</li>
-                       <li>🚚 Đang giao - 11/07/2025 08:30</li>
-                       <li>📦 Đã giao - 11/07/2025 14:45</li>
-                   </ul>
-                </div>
-            </details>
+                    </details>
+                </ItemTemplate>
+            </asp:Repeater>
 
            
         </div>

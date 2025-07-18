@@ -87,7 +87,7 @@
         </div>
 
         <div style="text-align:center">
-            <button type="submit" id="bntThanhToan" onclick="ktra(event)" runat="server">Thanh toán</button>
+            <button type="submit" id="bntThanhToan" onserverclick="BtnThanhToan_Click" runat="server">Thanh toán</button>
         </div>
     </form>
 

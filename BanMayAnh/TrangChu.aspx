@@ -27,7 +27,7 @@
                             <li><a href="MayAnh.aspx?loai=sony">Sony</a></li>
                         </ul>
                     </li>
-                    <li><a href="OngKinh.aspx">Ống kính</a></li>
+                    <li id = "ongkinh" runat="server"><a href="MayAnh.aspx?loai=ongkinh">Ống kính</a></li>
                     <li><a href="Timkiem.aspx">Tìm kiếm</a></li>
                     <li class="dropdown">
                         <a href="GioHang.aspx">Giỏ hàng</a>
