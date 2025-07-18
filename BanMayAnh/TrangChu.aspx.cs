@@ -11,7 +11,8 @@ namespace BanMayAnh
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            List<MayAnh> dssp = new List<MayAnh>();
+            dssp = (List<MayAnh>)Application["DSSP"];
             if (Session["LoggedInUser"] != null)
             {
                 blogin.Visible = false;
@@ -21,6 +22,15 @@ namespace BanMayAnh
             {
                 blogin.Visible = true;
                 alogin.Visible = false;
+            }
+            Hienthidssp(dssp);
+
+        }
+        private void Hienthidssp(List<MayAnh> ds)
+        {
+            foreach (MayAnh anh in ds)
+            {
+                dssp.InnerHtml += $@"<div class='sp'><img src='{anh.Anh}'/><h4>{anh.Tensp}</h4><p class=""gia"">{anh.Gia:N0}VND</p></div>";
             }
         }
     }
