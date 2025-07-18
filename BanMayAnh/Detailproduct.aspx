@@ -62,21 +62,37 @@
                 </div>
                     <h1 class="product-title">Máy Ảnh Fujifilm X100 VI Mark VI (X100VI - MỚI)</h1>
 
-                    <p class="product-price"><span>46.900.000 ~ 49.490.000₫</span></p>
+                    <p class="product-price"><span id="giaChonText">46.900.000 ~ 49.490.000₫</span></p>
 
-                    <h4>Phân loại</h4>
-                    <div class="phanloai-group">
-                        <button class="phanloai">Hàng mới chất lượng</button>
-                        <button class="phanloai">Hàng mới nhập khẩu</button>
-                        <button class="phanloai">Hàng đẹp</button>
-                    </div>
+<h4>Phân loại</h4>
+<div class="phanloai-group">
+  <button type="button" class="phanloai" onclick="chonLoai(this, 'hangmoi')">Hàng mới chính hãng</button>
+  <button type="button" class="phanloai" onclick="chonLoai(this, 'nhapkhau')">Hàng mới nhập khẩu</button>
+  <button type="button" class="phanloai" onclick="chonLoai(this, 'hangdep')">Hàng đẹp</button>
+</div>
+
+<div class="color-price-wrapper">
+  <ul id="hangmoi-list" class="color-price-list">
+    <li onclick="chonMau(this, 'Màu đen', '50.000.000₫')">Màu đen – 50.000.000₫</li>
+    <li onclick="chonMau(this, 'Màu bạc', '54.000.000₫')">Màu bạc – 54.000.000₫</li>
+  </ul>
+
+  <ul id="nhapkhau-list" class="color-price-list">
+    <li onclick="chonMau(this, 'Màu bạc', '57.000.000₫')">Màu bạc – 57.000.000₫</li>
+    <li onclick="chonMau(this, 'Màu đen', '52.000.000₫')">Màu đen – 52.000.000₫</li>
+  </ul>
+  <ul id="hangdep-list" class="color-price-list">
+    <li onclick="chonMau(this, 'Màu đen', '45.000.000₫')">Màu đen – 45.000.000₫</li>
+    <li onclick="chonMau(this, 'Màu bạc', '47.000.000₫')">Màu bạc – 47.000.000₫</li>
+  </ul>
+</div>
                     <div class="quantity-group">
                         <label for="quantity">Số lượng:</label>
                         <input type="number" id="quantity" name="quantity" min="1" value="1" />
                     </div>
                     <div class="product-actions">
-                        <button type="button" class ="add" onclick="window.open('GioHang.aspx', '_blank')">Thêm Vào Giỏ Hàng</button>
-                        <button type="button" class="purchase" onclick="window.open('ThanhToan.aspx', '_blank')">Mua Ngay</button>
+                        <button type="button" class ="add" onclick="GioHang()">Thêm Vào Giỏ Hàng</button>
+                        <button type="button" class="purchase" onclick="muaNgay()">Mua Ngay</button>
                     </div>
 
                     <h3>Các thông số kỹ thuật</h3>
