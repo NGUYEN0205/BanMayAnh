@@ -27,7 +27,7 @@ function setMainImage(imgElement) {
     }, 200);
     currentIndex = Array.from(thumbs).indexOf(imgElement);
 }
-let loaiDangChon = null;
+/*let loaiDangChon = null;
 let mauDangChon = null;
 let giaDangChon = null;
 
@@ -83,6 +83,7 @@ window.GioHang = GioHang;
 window.chonLoai = chonLoai;
 window.chonMau = chonMau;
 window.muaNgay = muaNgay;
+*/
 
 
 

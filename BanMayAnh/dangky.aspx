@@ -1,69 +1,68 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dangky.aspx.cs" Inherits="BanMayAnh.dangky" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Đăng ký tài khoản</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <style>
-    body {
-        background-image: url('camera.jpg');
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: Arial, sans-serif;
-    }
-    #content {
-        background: #ccc;
-        padding: 20px;
-        width: 500px;
-        border-radius: 10px;
-        margin: 0 auto;
-    }
-    .input-group {
-        margin-bottom: 20px;
-        text-align: left;
-    }
-    .error {
-        color: #ff4d4d;
-        font-size: 12px;
-        margin-top: 5px;
-        display: block;
-    }
-    h1 {
-        font-size: 24px;
-        margin-bottom: 20px;
-        text-align:center;
-    }
-    input, select {
-        width: 100%;
-        padding: 10px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-    button {
-        width: 48%;
-        padding: 10px;
-        border-radius: 5px;
-        background: #7289da;
-        border: none;
-        cursor: pointer;
-    }
-    button:hover {
-        background: #677bc4;
-    }
-    .login-link {
-        color: #00aff4;
-        text-align: center;
-        margin-top: 15px;
-        display: block;
-        text-decoration: none;
-    }
-</style>
+        body {
+            background-image: url('camera.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        #content {
+            background: #ccc;
+            padding: 20px;
+            width: 500px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .error {
+            color: #ff4d4d;
+            font-size: 12px;
+            margin-top: 5px;
+            display: block;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            border-radius: 5px;
+            background: #7289da;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #677bc4;
+        }
+        .login-link {
+            color: #00aff4;
+            text-align: center;
+            margin-top: 15px;
+            display: block;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <div id="content">

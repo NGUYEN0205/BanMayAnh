@@ -12,8 +12,7 @@ namespace BanMayAnh
             int id;
             if (!int.TryParse(Request.QueryString["id"], out id))
             {
-                Response.Write("<h3>Id sản phẩm không hợp lệ.</h3>");
-                return;
+                Response.Redirect("MayAnh.aspx");
             }
             List<MayAnh> ds = Application["DSSP"] as List<MayAnh>;
             if (ds == null || ds.Count == 0)

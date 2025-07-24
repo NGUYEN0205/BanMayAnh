@@ -9,8 +9,18 @@ namespace BanMayAnh
 {
     public partial class dangky : System.Web.UI.Page
     {
+        protected System.Web.UI.HtmlControls.HtmlGenericControl fullnameError;
+        protected System.Web.UI.HtmlControls.HtmlGenericControl usernameError;
+        protected System.Web.UI.HtmlControls.HtmlGenericControl passwordError;
+        protected System.Web.UI.HtmlControls.HtmlGenericControl repasswordError;
+        protected System.Web.UI.HtmlControls.HtmlGenericControl emailError;
+        protected System.Web.UI.HtmlControls.HtmlGenericControl phoneError;
+        protected System.Web.UI.HtmlControls.HtmlGenericControl dobError;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (IsPostBack)
             {
                 string action = Request.Form["action"];
@@ -168,4 +178,5 @@ namespace BanMayAnh
             }
         }
     }
+            
 }

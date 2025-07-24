@@ -1,8 +1,4 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-}
-
+﻿
 body {
     background-color: #FBF2EB;
     font-family: 'Times New Roman', Times, serif;
@@ -138,9 +134,14 @@ body {
     background: #fff;
     padding: 16px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: center;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.product-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
     .product-item img {
@@ -154,7 +155,9 @@ body {
         font-size: 16px;
         margin-bottom: 8px;
         height: 48px;
+        overflow: hidden;
     }
+
 
 button {
     padding: 10px 18px;
