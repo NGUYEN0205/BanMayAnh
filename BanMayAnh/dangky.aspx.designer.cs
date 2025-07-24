@@ -24,15 +24,6 @@ namespace BanMayAnh
         protected global::System.Web.UI.HtmlControls.HtmlInputText fullname;
 
         /// <summary>
-        /// fullnameError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fullnameError;
-
-        /// <summary>
         /// username control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace BanMayAnh
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText username;
-
-        /// <summary>
-        /// usernameError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl usernameError;
 
         /// <summary>
         /// password control.
@@ -60,15 +42,6 @@ namespace BanMayAnh
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
 
         /// <summary>
-        /// passwordError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl passwordError;
-
-        /// <summary>
         /// repassword control.
         /// </summary>
         /// <remarks>
@@ -76,15 +49,6 @@ namespace BanMayAnh
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword repassword;
-
-        /// <summary>
-        /// repasswordError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl repasswordError;
 
         /// <summary>
         /// email control.
@@ -96,15 +60,6 @@ namespace BanMayAnh
         protected global::System.Web.UI.HtmlControls.HtmlInputText email;
 
         /// <summary>
-        /// emailError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailError;
-
-        /// <summary>
         /// phone control.
         /// </summary>
         /// <remarks>
@@ -112,15 +67,6 @@ namespace BanMayAnh
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText phone;
-
-        /// <summary>
-        /// phoneError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl phoneError;
 
         /// <summary>
         /// dob control.
@@ -132,12 +78,12 @@ namespace BanMayAnh
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dob;
 
         /// <summary>
-        /// dobError control.
+        /// tenlop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dobError;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tenlop;
     }
 }

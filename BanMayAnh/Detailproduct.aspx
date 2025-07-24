@@ -38,7 +38,6 @@
     </div>
 </div>
 <div class="product-container">
-  <!-- CỘT TRÁI: Hình ảnh sản phẩm -->
   <div class="product-image">
     <div class="main-image-wrapper">
       <div class="ribbon">sale</div>

@@ -22,7 +22,7 @@ namespace BanMayAnh
                 ds = new List<MayAnh>();
             }
 
-            MayAnh sp = ds.FirstOrDefault(sp => sp.Id == id);
+            MayAnh sp = ds.FirstOrDefault(sp1 => sp1.Id == id);
 
             if (sp != null)
             {
